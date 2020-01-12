@@ -3,7 +3,7 @@ import { SHOW_LIST, Episode_LIST } from '../actions/Types';
 export const getShowList = () => (dispatch) => {
     fetch('http://api.tvmaze.com/shows')
       .then(res => res.json())
-      .then((data) => {debugger;
+      .then((data) => {
         dispatch({
             type: SHOW_LIST,
             payload: data
@@ -12,10 +12,10 @@ export const getShowList = () => (dispatch) => {
       .catch(console.log)
 };
 
-export const getEpisodeList = (id) => (dispatch) => {debugger;
+export const getEpisodeList = (id) => (dispatch) => {
   fetch(`http://api.tvmaze.com/shows/${id}/episodes`)
     .then(res => res.json())
-    .then((data) => {debugger;
+    .then((data) => {
       dispatch({
           type: Episode_LIST,
           payload: data

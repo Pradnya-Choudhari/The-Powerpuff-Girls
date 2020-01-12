@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 export default function ShowReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case SHOW_LIST:debugger;
+        case SHOW_LIST:
             return { ...state, list: action.payload };
         case Episode_LIST:
             return { ...state, episodes: action.payload };

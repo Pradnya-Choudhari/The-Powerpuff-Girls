@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import {
   Switch,
-  Route,
-  Link,
-  Router
+  Route
 } from "react-router-dom";
-import List from './components/list/List';
-import Show from './components/show_details/Show';
-import Episode from './components/episode_details/Episode';
+import Home from './components/home/Home';
+import Show from './components/show/Show';
+import Episode from './components/episode/Episode';
 import Header from './components/shared/header/Header';
 import Footer from './components/shared/footer/Footer';
 
@@ -17,11 +15,15 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Switch>
-          <Route exact path="/" component={List} />
-          <Route exact path="/show" component={Show} />
-          <Route exact path="/episode" component={Episode} />
-        </Switch>
+        <div class="container">
+          <br />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/show" component={Show} />
+            <Route exact path="/episode" component={Episode} />
+          </Switch>
+          <br />
+        </div>
         <Footer />
       </div>
     );
