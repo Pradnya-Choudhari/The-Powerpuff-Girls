@@ -40,27 +40,29 @@ class Show extends Component {
         <br />
         <h1>Episode list</h1>
         <table>
-          <tr>
-            <th>Episode</th>
-            <th>Name</th>
-            <th>Airdate</th>
-          </tr>
-
-          {this.props.episodes.map(function (item) {
-            return (
-              <tr>
-                <td>S{ ("0" + item.season).slice(-2)}E{ ("0" + item.number).slice(-2)}</td>
-                <td><Link to={{
-                  pathname: '/episode',
-                  state: {
-                    episodeDetails: item ? item : ''
-                  }
-                }}>{item.name}</Link></td>
-                <td>{item.airdate}</td>
-              </tr>
-
-            );
-          })}
+          <thead>
+            <tr>
+              <th>Episode</th>
+              <th>Name</th>
+              <th>Airdate</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.props.episodes.map(function (item) {
+              return (
+                <tr key={item.id}>
+                  <td>S{("0" + item.season).slice(-2)}E{("0" + item.number).slice(-2)}</td>
+                  <td><Link to={{
+                    pathname: '/episode',
+                    state: {
+                      episodeDetails: item ? item : ''
+                    }
+                  }}>{item.name}</Link></td>
+                  <td>{item.airdate}</td>
+                </tr>
+              );
+            })}
+          </tbody>
         </table>
       </div>
     );
