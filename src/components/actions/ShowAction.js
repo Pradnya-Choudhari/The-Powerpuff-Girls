@@ -1,4 +1,4 @@
-import { SHOW_LIST, Episode_LIST } from '../actions/Types';
+import { SHOW_LIST, EPISODE_LIST } from '../actions/Types';
 
 export const getShowList = () => (dispatch) => {
     fetch('http://api.tvmaze.com/shows')
@@ -17,7 +17,7 @@ export const getEpisodeList = (id) => (dispatch) => {
     .then(res => res.json())
     .then((data) => {
       dispatch({
-          type: Episode_LIST,
+          type: EPISODE_LIST,
           payload: data
       });
     })
