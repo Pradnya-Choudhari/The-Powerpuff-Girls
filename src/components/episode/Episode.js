@@ -25,7 +25,7 @@ class Episode extends Component {
       <div>
         <div className="row">
           <div className="col-sm-5">
-            <img alt={this.state.episodeDetails.name} height="400px" width="400px" src={this.state.episodeDetails.image ? this.state.episodeDetails.image.original : ''}></img>
+            <img alt={this.state.episodeDetails.name} className="img-fluid" height="400px" width="400px" src={this.state.episodeDetails.image ? this.state.episodeDetails.image.original : ''}></img>
           </div>
           <div className="col-sm-7">
             <h1>{this.state.episodeDetails.name}</h1>

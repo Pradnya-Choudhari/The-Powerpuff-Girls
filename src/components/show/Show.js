@@ -26,7 +26,7 @@ class Show extends Component {
       <div>
         <div className="row">
           <div className="col-sm-4">
-            <img alt={this.state.showDetails.name} height="300px" width="300px" src={this.state.showDetails.image ? this.state.showDetails.image.original : ''}></img>
+            <img alt={this.state.showDetails.name} className="img-fluid" height="300px" width="300px" src={this.state.showDetails.image ? this.state.showDetails.image.original : ''}></img>
           </div>
 
           <div className="col-sm-8">
@@ -36,6 +36,7 @@ class Show extends Component {
 
           </div>
         </div>
+        <br />
         <br />
         <h1>Episode list</h1>
         <table>

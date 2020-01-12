@@ -23,6 +23,7 @@ class App extends Component {
             <Route exact path="/episode" component={Episode} />
           </Switch>
           <br />
+          <br />
         </div>
         <Footer />
       </div>
