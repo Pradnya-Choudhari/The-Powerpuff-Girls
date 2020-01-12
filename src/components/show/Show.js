@@ -17,21 +17,19 @@ class Show extends Component {
   }
 
   render() {
-
     if (!this.state.showDetails) {
-      return (<div class="row">
+      return (<div className="row">
         There seems to be some error.  Click <Link to="/">here</Link> to go to Home page.
       </div>);
     }
-
     return (
       <div>
-        <div class="row">
-          <div class="col-sm-4">
-            <img height="300px" width="300px" src={this.state.showDetails.image ? this.state.showDetails.image.original : ''}></img>
+        <div className="row">
+          <div className="col-sm-4">
+            <img alt={this.state.showDetails.name} height="300px" width="300px" src={this.state.showDetails.image ? this.state.showDetails.image.original : ''}></img>
           </div>
 
-          <div class="col-sm-8">
+          <div className="col-sm-8">
             <h1>{this.state.showDetails.name}</h1>
             <div dangerouslySetInnerHTML={{ __html: this.state.showDetails.summary }}>
             </div>
