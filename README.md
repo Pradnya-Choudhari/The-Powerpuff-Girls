@@ -4,6 +4,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. Run `npm install` - If you forget to do this, you'll get an error when you try to start the app later.
 2. Run `npm start` - This command opens web app in (http://localhost:3000) your web browser.
 
+## Components
+1. Header
+2. Footer
+3. Home - For listing all tv shows returned by Api
+4. Show - For Showing details of selected tv show
+5. Episode - For showing description of selected episode
+
+## Dependencies
+1. react
+2. react-router-dom
+3. bootstrap
+4. react-redux
+5. redux
+
 ## Available Scripts
 
 In the project directory, you can run:
