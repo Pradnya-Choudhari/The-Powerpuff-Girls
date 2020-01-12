@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Get Started
+1. Run `npm install` - If you forget to do this, you'll get an error when you try to start the app later.
+2. Run `npm start` - This command opens web app in (http://localhost:3000) your web browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
